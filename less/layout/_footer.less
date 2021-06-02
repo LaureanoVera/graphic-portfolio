@@ -1,0 +1,44 @@
+.footer {
+  color: @primary-color;
+  width: 100vw;
+  height: 24vh;
+  background-color: @dark-color;
+  box-shadow: 0 -1px 10px @primary-color;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__me {
+    display: flex;
+    align-items: center;
+    &-img {
+      width: 50px;
+      border-radius: 50%;
+    }
+    &-name {
+      margin-left: @global-1;
+      color: @primary-color;
+      &:hover {
+        color: @secondary-color;
+      }
+    }
+  }
+  
+  &__links {
+    display: flex;
+  }
+  &__link {
+    margin-left: @global-1;
+    color: @primary-color;
+    &:hover {
+      color: @secondary-color;
+    }
+  }
+  
+  &__copy {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    padding-top: @global-1;
+  }
+}

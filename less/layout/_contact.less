@@ -1,0 +1,34 @@
+.contact {
+  width: 90%;
+  max-width: 512px;
+  margin: 0 auto;
+  padding: @global-4 0;
+
+  &__input {
+    width: 100%;
+    padding: @global-1;
+    outline: none;
+    border: none;
+    border-radius: @global-1 / 2;
+    margin-bottom: @global-2;
+    background-color: fade(@dark-color, 50%);
+    backdrop-filter: blur(1px);
+    .box-shadow(3px);
+  }
+
+  &__button {
+    display: block;
+    left: auto;
+    background-color: @primary-color;
+    outline: none;
+    border: none;
+    border-radius: @global-1 / 2;
+    cursor: pointer;
+    padding: @global-1 @global-4;
+    &:hover {
+      background-color: @secondary-color;
+      color: @light-color;
+      .box-shadow(3px);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.box-shadow(@size){
+  box-shadow: 0 0 @size @primary-color,
+              0 0 (@size + 2) @secondary-color;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.gradient {
+  background: linear-gradient(190deg, rgba(21,169,250,0.35) 0%, rgba(23,24,49,0.35) 100%);
+}
+.text-shadow(@size) {
+  text-shadow:  0 0 @size @primary-color,
+                0 0 (@size + 2) @secondary-color,
+                0 0 (@size + 4) @primary-color,
+                0 0 (@size + 5) @secondary-color;
+}
+.flat-shadow(@size) {
+  text-shadow: @size -@size @primary-color,
+               -@size @size @secondary-color;
+}
+.block-flat-shadow(@size) {
+  box-shadow: @size -@size @primary-color,
+              -@size @size @secondary-color;;
+}
+.all-block {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,37 @@
+.blink {
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      text-shadow: none;
+    }
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      .text-shadow(10px);
+    }
+  }
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      .text-shadow(10px);
+    }
+  }
+}

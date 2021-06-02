@@ -1,0 +1,83 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .box-shadow(2px);
+
+  &__down {
+    position: absolute;
+    bottom: 5%;
+    background-color: @light-color;
+    color: @dark-color;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(10deg);
+    .block-flat-shadow(-3px);
+    &:hover {
+      background-color: @dark-color;
+      color: @light-color;
+      transform: rotate(-10deg);
+      .block-flat-shadow(3px);
+    }
+  }
+
+  &__title {
+    font-size: @font-base * 3;
+    line-height: @font-base * 3;
+    letter-spacing: @global-1 / 5 ;
+    text-transform: uppercase;
+    position: relative;
+    margin: @global-1 0 @global-2 0;
+    transition: @transitions;
+    .flat-shadow(2px);
+    &--color {
+      transition: @transitions;
+      color: @dark-color;
+      font-family: @fonts-big;
+      font-size: @font-base * 2;
+      &:hover {
+        .flat-shadow(-3px);
+      }
+    }
+  }
+
+  &__sub {
+    transition: @transitions;
+    .flat-shadow(2px);
+    &:hover {
+      transform: skew(10deg);
+      .flat-shadow(3px);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    .all-block;
+    z-index: -1;
+    background-image: url('../../img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(.7) contrast(1.5) @hue-rotate opacity(.5);
+    backdrop-filter: blur(5px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    padding: 0;
+  }
+}

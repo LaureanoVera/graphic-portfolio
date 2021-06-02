@@ -1,0 +1,116 @@
+.about {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: @global-2 @global-1;
+  &__wrapper {
+    margin: @global-4 auto;
+    padding: @global-4 @global-2;
+    background: fade(@secondary-color, 20%);
+    backdrop-filter: blur(2px);
+    .box-shadow(3px);
+  }
+
+  &__stats {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: 2fr 0fr;
+    &-img {
+      margin: 0 auto;
+      width: 180px;
+      height: 180px;
+      transition: @transitions;
+      opacity: .8;
+      .block-flat-shadow(4px);
+      &:hover {
+        .block-flat-shadow(-6px);
+      } 
+    }
+    &-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--type {
+        color: @secondary-color;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__skills {
+    margin: @global-4 0;
+    &-title {
+      position: relative;
+      margin: @global-1 0;
+      &--color {
+        color: @primary-color;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: @global-3;
+        bottom: 0;
+        background-color: @secondary-color;
+      } 
+    }
+    &-name {
+      background-color: fade(@primary-color, 90%);
+      padding: @global-1 / 2;
+      border-radius: @global-1 / 2;
+      transition: @transitions;
+      color: @dark-color;
+      &:hover {
+        background-color: fade(@secondary-color, 90%);
+      }
+    }
+  }
+
+  &__info {
+    &-title {
+      position: relative;
+      padding: @global-1 / 2;
+      margin: @global-1 0;
+      &:before {
+        content: '';
+        position: absolute;
+        width: @global-4;
+        height: 2px;
+        bottom: 0;
+        background-color: @secondary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about__stats {
+    grid-template-columns: 1fr;
+    row-gap: @global-3;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    width: 100%;
+    padding: 0;
+    &__wrapper {
+      border-radius: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr;
+    gap: @global-1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
